@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GuestBookController!{% endblock %}
+
+{% block body %}
+<a href="{{path('logout')}}">Logout</a>
+<h2>Welcome to Guest Book </h2>
+{{ form_start(guest_form, {'attr': {'id': 'custom_guest_form', 'action': 'action/action'}}) }}
+ {{form(guest_form)}}
+ {{form_end(guest_form)}}
+{% endblock %}
